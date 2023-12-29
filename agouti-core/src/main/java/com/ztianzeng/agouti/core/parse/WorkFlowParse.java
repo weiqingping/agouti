@@ -49,6 +49,15 @@ public class WorkFlowParse {
         return WorkFlowParse.parse(resource);
     }
 
+
+    public static WorkFlowDef fromText(String json) {
+        try {
+            return OM.readValue(json, WorkFlowDef.class);
+        } catch (IOException e) {
+            throw new AgoutiException(e);
+        }
+    }
+
     /**
      * read json file wrap to WorkFlowDef
      *

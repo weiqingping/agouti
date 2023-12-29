@@ -144,7 +144,7 @@ public class HttpTask extends WorkFlowTask {
                 if (v != null) {
                     urlSb.append(k);
                     urlSb.append("=");
-                    urlSb.append(v.toString());
+                    urlSb.append(v);
                     urlSb.append("&");
                 }
             });
